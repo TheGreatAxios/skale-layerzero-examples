@@ -113,8 +113,6 @@ Once you've finished configuring your OFT, you can open the messaging channel an
 
 **Run the following commands:**
 
-> If you want to change the amount bridged please change it on the call of the BridgeToken function
-
 To setPeer on Europa token side
 ```sh
 npx hardhat run scripts/setPeer.ts --network europa
@@ -130,6 +128,8 @@ npx hardhat run scripts/setPeer.ts --network mumbai
 After seting the peers you can now procced you bridging the tokens.
 
 **Run the following commands:**
+
+> If you want to change the amount bridged please change it on the call of the BridgeToken function
 
 To bridge tokens from Europa to Mumbai
 ```sh

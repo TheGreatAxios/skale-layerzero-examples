@@ -103,7 +103,7 @@ npx hardhat lz:deploy --help
 
 By following these steps, you can focus more on creating innovative omnichain solutions and less on the complexities of cross-chain communication.
 
-## Bridge Tokens
+## 3) Bridge Tokens
 
 This is a two step process. The created examples are under the `scripts` folder and it shows the bridging tokens between two testnet chains Mumbai Testnet and SKALE Europa Testnet. 
 

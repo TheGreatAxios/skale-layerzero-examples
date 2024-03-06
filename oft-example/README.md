@@ -103,6 +103,44 @@ npx hardhat lz:deploy --help
 
 By following these steps, you can focus more on creating innovative omnichain solutions and less on the complexities of cross-chain communication.
 
+## Bridge Tokens
+
+This is a two step process. The created examples are under the `scripts` folder and it shows the bridging tokens between two testnet chains Mumbai Testnet and SKALE Europa Testnet. 
+
+1. **Set Peer**
+
+Once you've finished configuring your OFT, you can open the messaging channel and connect your OFT deployment to different chains by calling setPeer. 
+
+**Run the following commands:**
+
+> If you want to change the amount bridged please change it on the call of the BridgeToken function
+
+To setPeer on Europa token side
+```sh
+npx hardhat run scripts/setPeer.ts --network europa
+```
+
+To setPeer on Mumbai token side
+```sh
+npx hardhat run scripts/setPeer.ts --network mumbai
+```
+
+2. **Bridge**
+
+After seting the peers you can now procced you bridging the tokens.
+
+**Run the following commands:**
+
+To bridge tokens from Europa to Mumbai
+```sh
+npx hardhat run scripts/bridge.ts --network europa
+```
+
+To bridge tokens from Mumbai to Europa
+```sh
+npx hardhat run scripts/bridge.ts --network mumbai
+```
+
 <br></br>
 
 <p align="center">

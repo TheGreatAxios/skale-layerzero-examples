@@ -4,12 +4,16 @@
 // - Duplicate .env.example file and name it .env
 // - Fill in the environment variables
 import 'dotenv/config'
+//import { task } from 'hardhat/config';
+
+import "@nomicfoundation/hardhat-toolbox";
 
 import 'hardhat-deploy'
 import 'hardhat-contract-sizer'
 import '@nomiclabs/hardhat-ethers'
 import '@layerzerolabs/toolbox-hardhat'
 import { HardhatUserConfig, HttpNetworkAccountsUserConfig } from 'hardhat/types'
+import './tasks/l0-zero-actions'
 
 import { EndpointId } from '@layerzerolabs/lz-definitions'
 
@@ -50,13 +54,13 @@ const config: HardhatUserConfig = {
     },
     networks: {
         celo: {
-            eid: EndpointId.ARBITRUM_TESTNET,
+            eid: EndpointId.CELO_V2_TESTNET,
             url: 'https://celo-alfajores.infura.io/v3/768fc166c44e4505a858c8bfa754a4b3',
             accounts,
         },
         fantom: {
             eid: EndpointId.FANTOM_V2_TESTNET,
-            url: 'https://fantom.api.onfinality.io/public',
+            url: 'https://rpc.testnet.fantom.network',
             accounts,
         },
         mumbai: {

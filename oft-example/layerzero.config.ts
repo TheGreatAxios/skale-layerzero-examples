@@ -1,41 +1,42 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 import { EndpointId } from '@layerzerolabs/lz-definitions'
+import TokenMumbai from './deployments/mumbai/MyOFT.json'
+import TokenEuropa from './deployments/europa/MyOFT.json'
+import TokenCelo from './deployments/celo/MyOFT.json'
+import TokenFantom from './deployments/fantom/MyOFT.json'
 
 const celoContract = {
     eid: EndpointId.CELO_V2_TESTNET,
     contractName: 'MyOFT',
+    contractAddress: TokenCelo.address,
 }
 
 const fantomContract = {
     eid: EndpointId.FANTOM_V2_TESTNET,
     contractName: 'MyOFT',
+    contractAddress: TokenFantom.address,
+
 }
 
 const mumbaiContract = {
     eid: EndpointId.POLYGON_V2_TESTNET,
     contractName: 'MyOFT',
+    contractAddress: TokenMumbai.address,
 }
 
 const skaleContract = {
     eid: EndpointId.SKALE_V2_TESTNET,
-    contractName: 'MyOFT'
+    contractName: 'MyOFT',
+    contractAddress: TokenEuropa.address,
 }
 
 export default {
-    contracts: [
-        {
-            contract: fantomContract,
-        },
-        {
-            contract: celoContract,
-        },
-        {
-            contract: mumbaiContract,
-        },
-        {
-            contract: skaleContract
-        }
-    ],
+    contracts: {
+        celo: celoContract,
+        fantom: fantomContract, 
+        mumbai: mumbaiContract,
+        europa: skaleContract,
+    },
     connections: [
         {
             from: fantomContract,
